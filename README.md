@@ -4,9 +4,10 @@ A C++ console application that uses Object-Oriented Programming to manage studen
 
 ## Features
 
-- Add, display, search, and delete student records
-- Fully modular with OOP principles
-- Clean folder structure with Makefile
+- Object-Oriented Programming
+- File persistence
+- Modular design using header/source files
+- Makefile for easy compilation
 
 ##  Getting Started
 
