@@ -17,3 +17,16 @@ A C++ console application that uses Object-Oriented Programming to manage studen
     cd student-management-system
     ```
 
+##  How to Build & Run
+##  Using Makefile
+
+1. **Build the project:**
+   ```bash
+   make
+   ```
+
+2. **Run the application:**
+   ```bash
+   ./student_management_system
+   ```
+
