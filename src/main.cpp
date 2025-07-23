@@ -1,4 +1,3 @@
-#include "../include/Student.h"
 #include "../include/StudentManager.h"
 #include <iostream>
 
