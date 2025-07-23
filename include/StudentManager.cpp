@@ -1,36 +1,24 @@
-#include "StudentManager.h"
-#include <iostream>
+#ifndef STUDENT_MANAGER_H
+#define STUDENT_MANAGER_H
 
-void StudentManager::addStudent(const Student& student) {
-    students.push_back(student);
-    std::cout << "Student added successfully.\n";
-}
+#include "Student.h"
+#include <vector>
+#include <string>
 
-void StudentManager::displayAll() const {
-    std::cout << "\nAll Students:\n";
-    for (const auto& student : students) {
-        student.display();
-    }
-}
+class StudentManager {
+private:
+    std::vector<Student> students;
+    std::string filename = "data/students.txt";
 
-void StudentManager::searchById(int id) const {
-    for (const auto& student : students) {
-        if (student.getId() == id) {
-            std::cout << "Student found:\n";
-            student.display();
-            return;
-        }
-    }
-    std::cout << "Student not found.\n";
-}
+    void loadFromFile();
+    void saveToFile() const;
 
-void StudentManager::deleteById(int id) {
-    for (auto it = students.begin(); it != students.end(); ++it) {
-        if (it->getId() == id) {
-            students.erase(it);
-            std::cout << "Student deleted.\n";
-            return;
-        }
-    }
-    std::cout << "Student not found.\n";
-}
+public:
+    StudentManager();
+    void addStudent(const Student& student);
+    void displayAll() const;
+    void searchById(int id) const;
+    void deleteById(int id);
+};
+
+#endif
